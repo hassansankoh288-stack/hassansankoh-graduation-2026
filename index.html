@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hassan Sankoh | Graduation 2026</title>
+
+<meta name="description"
+content="Celebrate Hassan Sankoh's Diploma in Computer Engineering graduation on 5 December 2026.">
+
+<style>
+:root {
+    --navy: #0b1733;
+    --navy-light: #142750;
+    --gold: #d8b45a;
+    --gold-light: #f5df9a;
+    --white: #ffffff;
+    --cream: #f8f6f0;
+    --text: #243047;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--navy);
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 540px;
+    padding: 80px 20px;
+    background:
+        radial-gradient(circle at top right, #263b65, transparent 45%),
+        linear-gradient(135deg, #08132c, #172b52);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge {
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(36px, 8vw, 66px);
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e1e6f1;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background: var(--gold-light);
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: white;
+}
+
+.countdown-section {
+    background: white;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.countdown-section h2,
+.section-title {
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.time-box {
+    min-width: 75px;
+    padding: 15px 12px;
+    background: var(--navy);
+    color: white;
+    border-bottom: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+.time-box span {
+    display: block;
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.time-box small {
+    font-size: 12px;
+}
+
+section.content-section {
+    padding: 65px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(10, 25, 50, 0.07);
+    border-top: 3px solid var(--gold);
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.education-list {
+    max-width: 700px;
+    margin: auto;
+}
+
+.education-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--gold);
+    border-radius: 5px;
+}
+
+.education-item strong {
+    color: var(--navy);
+    font-size: 18px;
+}
+
+.year {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--gold);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill {
+    text-align: center;
+    background: var(--navy);
+    color: white;
+    padding: 22px 12px;
+    border-radius: 10px;
+}
+
+.skill span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.gallery-section {
+    background: white;
+}
+
+.upload-box {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border: 2px dashed var(--gold);
+    background: #fffdf7;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.upload-box input {
+    display: block;
+    width: 100%;
+    margin: 18px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.photo-card {
+    background: var(--cream);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card p {
+    padding: 10px;
+    overflow-wrap: anywhere;
+}
+
+.remove-photo {
+    background: #8b1e2d;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.empty-gallery {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    border: 1px dashed #b9bdc8;
+    border-radius: 10px;
+}
+
+.support-section {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.support-section .section-title {
+    color: var(--gold);
+}
+
+.support-box {
+    max-width: 550px;
+    margin: 25px auto 0;
+    padding: 25px;
+    background: var(--navy-light);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+}
+
+.money-number {
+    color: var(--gold-light);
+    font-size: 27px;
+    font-weight: bold;
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    background: #060d1c;
+    color: white;
+    padding: 25px 15px;
+    border-top: 3px solid var(--gold);
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 18px;
+    }
+
+    section.content-section {
+        padding: 45px 18px;
+    }
+
+    .section-title,
+    .countdown-section h2 {
+        font-size: 25px;
+    }
+
+    .time-box {
+        min-width: 68px;
+    }
+
+    .photo-card img {
+        height: 190px;
+    }
+}
+
+@media print {
+    header nav,
+    .upload-box,
+    .remove-photo,
+    .button,
+    footer {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .hero,
+    .support-section {
+        background: white;
+        color: black;
+    }
+
+    .hero h1,
+    .hero h2,
+    .hero p,
+    .support-section .section-title {
+        color: black;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HS | GRADUATION 2026</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#support">Support</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="badge">A NEW CHAPTER BEGINS</div>
+
+    <h1>Hassan Sankoh</h1>
+
+    <h2>Diploma in Computer Engineering</h2>
+
+    <p>
+        With gratitude, determination, and pride, I invite you
+        to celebrate an important milestone in my academic journey.
+        Your prayers, encouragement, and support mean a great deal to me.
+    </p>
+
+    <p>
+        St. Joseph Technical Institute<br>
+        Lunsar, Sierra Leone
+    </p>
+
+    <p style="color:#f5df9a; font-weight:bold;">
+        SATURDAY, 5 DECEMBER 2026
+    </p>
+
+    <div>
+        <a class="button" href="#countdown-section">
+            Graduation Countdown
+        </a>
+
+        <a class="button button-outline" href="#gallery">
+            My Photo Gallery
+        </a>
+    </div>
+</section>
+
+<section class="countdown-section" id="countdown-section">
+    <h2>Counting Down to Graduation</h2>
+
+    <p>Every step brings me closer to this special day.</p>
+
+    <div class="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+    </div>
+
+    <p>5 December 2026</p>
+</section>
+
+<section class="content-section" id="about">
+    <div class="section-heading">
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            A journey shaped by learning, perseverance,
+            and a passion for technology.
+        </p>
+    </div>
+
+    <div class="about-grid">
+        <article class="card">
+            <h3>My Journey</h3>
+
+            <p>
+                My academic journey has helped me develop knowledge,
+                discipline, and a strong desire to keep learning.
+                I am proud to celebrate this important milestone.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>My Qualification</h3>
+
+            <p>
+                Diploma in Computer Engineering from
+                St. Joseph Technical Institute, Lunsar, Sierra Leone.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>My Vision</h3>
+
+            <p>
+                To grow in the technology industry, improve my
+                technical skills, solve real-world problems, and
+                contribute to the development of Sierra Leone.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="content-section" id="education">
+    <div class="section-heading">
+        <h2 class="section-title">My Education Journey</h2>
+
+        <p>Important milestones along my academic path.</p>
+    </div>
+
+    <div class="education-list">
+        <div class="education-item">
+            <span class="year">2017</span><br>
+            <strong>NPSE Certificate</strong>
+            <p>Completed primary school education.</p>
+        </div>
+
+        <div class="education-item">
+            <span class="year">2021</span><br>
+            <strong>BECE Certificate</strong>
+            <p>Completed basic education.</p>
+        </div>
+
+        <div class="education-item">
+            <span class="year">2023</span><br>
+            <strong>WASSCE</strong>
+            <p>Completed senior secondary school examinations.</p>
+        </div>
+
+        <div class="education-item">
+            <span class="year">2026</span><br>
+            <strong>Diploma in Computer Engineering</strong>
+            <p>St. Joseph Technical Institute, Lunsar.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section" id="skills">
+    <div class="section-heading">
+        <h2 class="section-title">My Skills and Interests</h2>
+
+        <p>
+            Areas I have an interest in developing
+            throughout my professional journey.
+        </p>
+    </div>
+
+    <div class="skills">
+        <div class="skill">
+            <span>💻</span>
+            Computer Skills
+        </div>
+
+        <div class="skill">
+            <span>🌐</span>
+            Web Development
+        </div>
+
+        <div class="skill">
+            <span>🔌</span>
+            Computer Engineering
+        </div>
+
+        <div class="skill">
+            <span>🛜</span>
+            Networking
+        </div>
+
+        <div class="skill">
+            <span>📚</span>
+            Teaching
+        </div>
+
+        <div class="skill">
+            <span>🚀</span>
+            Technology Innovation
+        </div>
+    </div>
+</section>
+
+<section class="content-section gallery-section" id="gallery">
+    <div class="section-heading">
+        <h2 class="section-title">My Graduation Gallery</h2>
+
+        <p>
+            A collection of personal memories and special moments.
+        </p>
+    </div>
+
+    <div class="upload-box">
+        <h3>Select Your Photos</h3>
+
+        <p>
+            Choose photos from your phone to preview them
+            in this browser.
+        </p>
+
+        <input
+            type="file"
+            id="photoInput"
+            accept="image/*"
+            multiple
+        >
+
+        <button class="button" type="button" id="clearPreview">
+            Clear Gallery Preview
+        </button>
+
+        <p id="photoStatus" aria-live="polite"></p>
+
+        <p style="font-size:12px; margin-top:10px;">
+            Note: These photos are previewed locally and are not
+            automatically published online.
+        </p>
+    </div>
+
+    <div class="gallery" id="photoGallery">
+        <div class="empty-gallery">
+            Your selected photos will appear here.
+        </div>
+    </div>
+</section>
+
+<section class="content-section support-section" id="support">
+    <div class="section-heading">
+        <h2 class="section-title">Support My Graduation</h2>
+
+        <p>
+            Your encouragement, prayers, and kind support
+            are sincerely appreciated as I celebrate this milestone.
+        </p>
+    </div>
+
+    <div class="support-box">
+        <h3>Orange Money</h3>
+
+        <p>Support my graduation celebration using the number below.</p>
+
+        <div class="money-number" id="orangeNumber">
+            079701665
+        </div>
+
+        <button class="button" id="copyNumber" type="button">
+            Copy Orange Money Number
+        </button>
+
+        <p id="copyStatus" aria-live="polite"></p>
+
+        <p style="font-size:12px; margin-top:15px;">
+            Please confirm the recipient's name before sending money.
+        </p>
+    </div>
+</section>
+
+<section class="content-section" id="contact">
+    <div class="section-heading">
+        <h2 class="section-title">Thank You</h2>
+    </div>
+
+    <div class="contact-box">
+        <h3>Every Step Counts</h3>
+
+        <p>
+            Thank you for visiting my graduation website and
+            sharing in this important chapter of my life.
+            Your encouragement inspires me to keep moving forward.
+        </p>
+
+        <br>
+
+        <p><strong>Hassan Sankoh</strong></p>
+
+        <p>Diploma in Computer Engineering</p>
+
+        <p>St. Joseph Technical Institute</p>
+
+        <button class="button" type="button" onclick="window.print()">
+            Print or Save as PDF
+        </button>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 <span>Hassan Sankoh</span>.
+        Graduation Celebration.
+    </p>
+
+    <p>Built with pride in Sierra Leone 🇸🇱</p>
+</footer>
+
+<script>
+/* Graduation countdown: Sierra Leone time is UTC. */
+function updateCountdown() {
+    const target = new Date("2026-12-05T00:00:00Z").getTime();
+    const now = Date.now();
+    const distance = target - now;
+
+    if (distance <= 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+    }
+
+    document.getElementById("days").textContent =
+        Math.floor(distance / 86400000);
+
+    document.getElementById("hours").textContent =
+        Math.floor((distance % 86400000) / 3600000);
+
+    document.getElementById("minutes").textContent =
+        Math.floor((distance % 3600000) / 60000);
+
+    document.getElementById("seconds").textContent =
+        Math.floor((distance % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+/* Local photo preview */
+const photoInput = document.getElementById("photoInput");
+const photoGallery = document.getElementById("photoGallery");
+const photoStatus = document.getElementById("photoStatus");
+const clearPreview = document.getElementById("clearPreview");
+
+let currentObjectURLs = [];
+
+function clearPhotoPreviews() {
+    currentObjectURLs.forEach(url => URL.revokeObjectURL(url));
+    currentObjectURLs = [];
+    photoGallery.replaceChildren();
+
+    const message = document.createElement("div");
+    message.className = "empty-gallery";
+    message.textContent = "Your selected photos will appear here.";
+
+    photoGallery.appendChild(message);
+}
+
+photoInput.addEventListener("change", function () {
+    clearPhotoPreviews();
+
+    const files = Array.from(this.files || []);
+    const validFiles = files.filter(file =>
+        file.type.startsWith("image/")
+    );
+
+    if (validFiles.length === 0) {
+        photoStatus.textContent = "Please select image files.";
+        return;
+    }
+
+    photoGallery.replaceChildren();
+
+    validFiles.forEach(file => {
+        const url = URL.createObjectURL(file);
+        currentObjectURLs.push(url);
+
+        const card = document.createElement("div");
+        card.className = "photo-card";
+
+        const image = document.createElement("img");
+        image.src = url;
+        image.alt = file.name;
+
+        const caption = document.createElement("p");
+        caption.textContent = file.name;
+
+        card.append(image, caption);
+        photoGallery.appendChild(card);
+    });
+
+    photoStatus.textContent =
+        validFiles.length + " photo(s) displayed in preview.";
+});
+
+clearPreview.addEventListener("click", function () {
+    clearPhotoPreviews();
+    photoInput.value = "";
+    photoStatus.textContent = "Photo preview cleared.";
+});
+
+
+/* Copy Orange Money number */
+document.getElementById("copyNumber").addEventListener("click", async function () {
+    const number = document.getElementById("orangeNumber").textContent.trim();
+    const status = document.getElementById("copyStatus");
+
+    try {
+        await navigator.clipboard.writeText(number);
+        status.textContent = "Number copied successfully.";
+    } catch (error) {
+        status.textContent = "Please select and copy the number manually: " + number;
+    }
+});
+</script>
+
+</body>
+  </html>
